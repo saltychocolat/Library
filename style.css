@@ -1,6 +1,14 @@
+:root{
+    --card:#fbf5f5;
+    --bg:antiquewhite;
+}
+
 *{
     margin: 0;
     padding: 0;
+    font-family: "Roboto", serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 
@@ -9,7 +17,8 @@ html,body{
     height: 100%;
 }
 .removeButton{
-    background-color: red;
+    margin-top: auto;
+    background-color: rgb(255, 0, 0);
 }
 .wrapper{
     height: 100%;
@@ -20,19 +29,22 @@ html,body{
 
 }
 .left{
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 50%;
+    padding-top: 20%;
 }    
 .content{
+    background-color: var(--bg);
     padding: 20px;
+    padding-bottom: 48px;
     height: 100%;
     width: 100%;
     display: grid;
 
     gap: 20px;
-    grid-template-columns: repeat(4,200px);
+    grid-template-columns: repeat(3,300px);
     grid-template-rows: repeat(3,200px);
     grid-auto-columns: 200px;
     grid-auto-rows: 200px;
@@ -44,15 +56,19 @@ html,body{
 
 
     font-size: 20px;
-    background-color: antiquewhite;
+    background-color: var(--card);
     padding: 10px;
     border-radius: 10px;
-    border: 3px solid sandybrown;
+    border: 3px solid rgba(16, 16, 16, 0.096);
     display: flex;
     flex-direction: column;
+    gap: 10px;
 
 }
 dialog{
+    width: 20%;
+    height: 30%;
+    border-radius: 10px;
     border:1px solid black;
     top: 50%;
     left: 50%;
@@ -61,7 +77,47 @@ dialog{
     -ms-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
 }
+dialog::backdrop{
+    opacity: 0.40;
+    background-color: blanchedalmond;
+}
+
+label{
+    display: flex;
+}
 .form{
+    height: 100%;
     display: flex;
     flex-direction: column;
+}
+.form > * {
+    padding: 10px;
+    flex: 1;
+}
+input{
+    border-radius: 4px;
+    margin-left: auto;
+}
+#confirmButton{
+    align-self: end;
+    border-radius: 2px;
+    width: 40px;
+    margin: 12px;
+}
+.left{
+    font-size: 30px;
+    background-image:url("backdrop.jpg");
+    background-size: cover;
+}
+#header{
+    background-color: antiquewhite;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+#new{
+    align-self: end;
+    padding: 10px;
+    margin: 10px;
+    margin-right: 20%;
+    border-radius: 10px;
 }

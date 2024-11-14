@@ -52,13 +52,18 @@ function createBook(){
 
 
         const hasRead =document.createElement("input");
+        const label = document.createElement("laber");
         hasRead.setAttribute("type","checkbox");
         hasRead.checked = entry.book.read;
+        label.textContent ="Read  ";
+
+        label.appendChild(hasRead);
+
 
         card.appendChild(title);
         card.appendChild(author);
         card.appendChild(pages);
-        card.appendChild(hasRead);
+        card.appendChild(label);
         card.appendChild(removeButton)
     
         content.appendChild(card);
