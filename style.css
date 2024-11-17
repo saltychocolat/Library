@@ -65,6 +65,9 @@ html,body{
     gap: 10px;
 
 }
+.card > *{
+    flex-grow: 1;
+}
 dialog{
     width: 20%;
     height: 30%;
@@ -83,6 +86,9 @@ dialog::backdrop{
 }
 
 label{
+    display: flex;
+}
+.divContainer{
     display: flex;
 }
 .form{
